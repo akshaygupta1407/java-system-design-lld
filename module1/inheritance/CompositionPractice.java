@@ -30,19 +30,40 @@ class Warrior extends BadCharacter {
 // --------------------------------------------------------
 
 // 1. Create Weapon interface here
+interface Weapon {
+    void useWeapon();
+}
 
 // 2. Create concrete weapons (Sword, Staff) here
+class Sword implements Weapon{
+    public void useWeapon() {
+        System.out.println("Swing sword!");
+    }
+}
+
+class Staff implements Weapon {
+    public void useWeapon() {
+        System.out.println("Cast spell!");
+    }
+}
 
 // 3. Create Hero using composition
 class Hero {
+    Weapon weapon;
+    Hero(Weapon weapon) {
+        this.weapon = weapon;
+    }
     // Add Weapon field
     // Add constructor
     
     public void attack() {
-        // use the weapon!
+        weapon.useWeapon();;
     }
     
     // Add setWeapon() to change weapons at runtime!
+    public void setWeapon(Weapon weapon) {
+        this.weapon = weapon;
+    }
 }
 
 public class CompositionPractice {
@@ -50,11 +71,11 @@ public class CompositionPractice {
         System.out.println("--- Composition Practice ---");
         
         // Test it here!
-        // Weapon sword = new Sword();
-        // Weapon staff = new Staff();
-        // Hero arthur = new Hero(sword);
-        // arthur.attack();
-        // arthur.setWeapon(staff); // Arthur picked up a magic staff!
-        // arthur.attack();
+        Weapon sword = new Sword();
+        Weapon staff = new Staff();
+        Hero arthur = new Hero(sword);
+        arthur.attack();
+        arthur.setWeapon(staff); // Arthur picked up a magic staff!
+        arthur.attack();
     }
 }
