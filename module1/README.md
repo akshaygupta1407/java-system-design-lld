@@ -73,3 +73,27 @@ You have a `Bird` class with a `fly()` method. You create `Sparrow extends Bird`
 **The Composition Solution:**
 Extract the flying behavior into an interface: `FlyBehavior`.
 Instead of a giant generic `Bird` parent class forcing `fly()` on everyone, you use composition. A `Sparrow` **has a** `FlyBehavior` object injected into it. A `Penguin` simply does not have it. Much cleaner!
+
+---
+
+## 1.4 Polymorphism (Static vs. Dynamic)
+
+### What is Polymorphism?
+Polymorphism (meaning "many forms") allows objects of different classes to be treated as objects of a common superclass. This is the **powerhouse** of flexible system design. It lets you write code that doesn't care about the *specific* type of object it's working with, only that the object "behaves" in a certain way.
+
+### 1. Static Polymorphism (Method Overloading)
+- **Occurs at**: Compile-time.
+- **How**: Multiple methods in the same class have the same name but different parameters (different number or types of arguments).
+- **Example**: `Math.add(int, int)` vs `Math.add(double, double)`.
+- **LLD Relevance**: Useful for providing multiple ways to initialize or interact with a component (e.g., a `Logger` that can log a `String` or a `Throwable`).
+
+### 2. Dynamic Polymorphism (Method Overriding)
+- **Occurs at**: Runtime.
+- **How**: A subclass provides a specific implementation for a method already defined in its superclass or interface. The Java Virtual Machine (JVM) determines which method to call at runtime based on the *actual* object, not the reference type.
+- **Example**: `Animal myPet = new Dog(); myPet.makeSound();` (Calls `Dog`'s `makeSound()`, even though the reference is `Animal`).
+- **LLD Relevance**: This is how we achieve the **Open/Closed Principle**. You can add new behaviors (like a `UPIPayment` class) without changing the existing `Checkout` code that just expects a `PaymentProcessor`.
+
+### Why Polymorphism is Critical for System Design
+1. **Extensibility**: You can add new functionality by creating new classes that implement an interface, without touching existing logic.
+2. **Decoupling**: The "caller" doesn't need to know the "callee's" internal details.
+3. **Pluggability**: You can swap implementations (e.g., switching from a `FileLogger` to a `CloudLogger`) with zero impact on the rest of the system.
