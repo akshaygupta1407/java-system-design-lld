@@ -51,3 +51,26 @@ Use abstraction and polymorphism:
 1.  **Extensibility**: Add new features with new classes.
 2.  **Safety**: Existing tested code stays untouched.
 3.  **Cleaner architecture**: You avoid large switch statements and endless `if-else` chains.
+
+---
+
+## 2.3 Liskov Substitution Principle (LSP)
+
+### What is LSP?
+The Liskov Substitution Principle says that objects of a superclass should be replaceable with objects of its subclasses without breaking the program.
+
+### Why is LSP important?
+If a subclass cannot behave like its parent, inheritance becomes misleading and unsafe.
+
+### How to recognize an LSP violation?
+If a subclass throws unsupported exceptions, ignores inherited behavior, or forces callers to treat it specially, LSP is probably broken.
+
+### Typical LSP solution
+1. Model real behavior honestly.
+2. Split interfaces when some subclasses cannot support the full contract.
+3. Prefer composition or smaller abstractions instead of forcing bad inheritance.
+
+### Key Benefits of LSP
+1.  **Safer inheritance**: Subclasses can truly stand in for their parents.
+2.  **Less special-case logic**: Callers do not need `instanceof` checks.
+3.  **Cleaner contracts**: Each class promises only what it can actually do.
