@@ -27,3 +27,27 @@ Ask yourself: "What does this class do?"
 1.  **Maintainability**: Changes are isolated to specific classes.
 2.  **Testability**: Small, focused classes are easier to unit test.
 3.  **Reusability**: You can reuse the `UserRepository` in other parts of the system without dragging along all the `UserProfile` logic.
+
+---
+
+## 2.2 Open/Closed Principle (OCP)
+
+### What is OCP?
+The Open/Closed Principle says software entities should be open for extension, but closed for modification.
+
+### Why is OCP important?
+In real systems, requirements change constantly. You want to add new behavior without rewriting stable code.
+
+### How to recognize an OCP violation?
+If you keep editing the same class every time a new type is introduced, that class is probably not following OCP.
+
+### Typical OCP solution
+Use abstraction and polymorphism:
+1. Define an interface or abstract class.
+2. Put each variation into its own class.
+3. Make the core logic depend on the abstraction, not the concrete type.
+
+### Key Benefits of OCP
+1.  **Extensibility**: Add new features with new classes.
+2.  **Safety**: Existing tested code stays untouched.
+3.  **Cleaner architecture**: You avoid large switch statements and endless `if-else` chains.
