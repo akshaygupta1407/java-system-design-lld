@@ -74,3 +74,26 @@ If a subclass throws unsupported exceptions, ignores inherited behavior, or forc
 1.  **Safer inheritance**: Subclasses can truly stand in for their parents.
 2.  **Less special-case logic**: Callers do not need `instanceof` checks.
 3.  **Cleaner contracts**: Each class promises only what it can actually do.
+
+---
+
+## 2.4 Interface Segregation Principle (ISP)
+
+### What is ISP?
+The Interface Segregation Principle says that no client should be forced to depend on methods it does not use.
+
+### Why is ISP important?
+If an interface becomes too large, some classes will be forced to implement useless methods, which leads to bad design and dummy code.
+
+### How to recognize an ISP violation?
+If a class implements methods with empty bodies, throws unsupported exceptions, or clearly does not need half the interface, ISP is being violated.
+
+### Typical ISP solution
+1. Split one large interface into smaller, focused interfaces.
+2. Let classes implement only the capabilities they actually need.
+3. Combine multiple small interfaces when a class needs more than one capability.
+
+### Key Benefits of ISP
+1.  **Cleaner code**: Classes only depend on what they use.
+2.  **Easier maintenance**: Changes stay localized.
+3.  **Better reuse**: Smaller interfaces are easier to combine in different ways.
