@@ -45,3 +45,24 @@ Use Factory when:
 1.  **Decoupling**: Callers depend on a factory or abstraction, not concrete constructors.
 2.  **Centralized creation**: Object creation logic stays in one place.
 3.  **Easier extension**: Add new product types with minimal changes to caller code.
+
+---
+
+## 3.3 Observer Pattern
+
+### What is Observer?
+The Observer Pattern lets an object notify many dependent objects automatically when its state changes.
+
+### Why is Observer important?
+When multiple parts of a system need to react to the same event, Observer avoids tight coupling between the event source and the listeners.
+
+### When should you use it?
+Use Observer when:
+1. One object changes and many others should react.
+2. You want to add or remove listeners dynamically.
+3. You want loose coupling between the publisher and subscribers.
+
+### Key Benefits
+1.  **Loose coupling**: The subject does not need to know concrete listeners.
+2.  **Dynamic subscription**: Listeners can join or leave at runtime.
+3.  **Event-driven design**: Great for notifications, UI updates, and system events.
