@@ -24,3 +24,24 @@ Use Strategy when:
 1.  **Flexibility**: Behavior can be changed without changing the caller.
 2.  **Clean code**: Fewer conditional branches.
 3.  **Extensibility**: New algorithms can be added without rewriting existing code.
+
+---
+
+## 3.2 Factory Pattern
+
+### What is Factory?
+The Factory Pattern centralizes object creation so the caller does not need to know the exact concrete class.
+
+### Why is Factory important?
+When object creation depends on input, environment, or configuration, Factory helps keep creation logic out of business logic.
+
+### When should you use it?
+Use Factory when:
+1. You want to hide object creation details.
+2. You have multiple related concrete classes.
+3. You want one place to decide which implementation to create.
+
+### Key Benefits
+1.  **Decoupling**: Callers depend on a factory or abstraction, not concrete constructors.
+2.  **Centralized creation**: Object creation logic stays in one place.
+3.  **Easier extension**: Add new product types with minimal changes to caller code.
