@@ -66,3 +66,24 @@ Use Observer when:
 1.  **Loose coupling**: The subject does not need to know concrete listeners.
 2.  **Dynamic subscription**: Listeners can join or leave at runtime.
 3.  **Event-driven design**: Great for notifications, UI updates, and system events.
+
+---
+
+## 3.4 Decorator Pattern
+
+### What is Decorator?
+The Decorator Pattern lets you add behavior to an object dynamically by wrapping it in another object.
+
+### Why is Decorator important?
+When you want many optional features, inheritance can explode into too many subclasses. Decorator adds features step by step instead.
+
+### When should you use it?
+Use Decorator when:
+1. You want to add responsibilities dynamically.
+2. You want to avoid subclass combinations.
+3. You want to keep the original object unchanged.
+
+### Key Benefits
+1.  **Flexible feature addition**: Wrap objects with extra behavior as needed.
+2.  **Avoids subclass explosion**: No need for one class per combination.
+3.  **Composable behavior**: Multiple decorators can be stacked together.
