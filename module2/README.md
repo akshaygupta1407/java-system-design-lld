@@ -97,3 +97,26 @@ If a class implements methods with empty bodies, throws unsupported exceptions, 
 1.  **Cleaner code**: Classes only depend on what they use.
 2.  **Easier maintenance**: Changes stay localized.
 3.  **Better reuse**: Smaller interfaces are easier to combine in different ways.
+
+---
+
+## 2.5 Dependency Inversion Principle (DIP)
+
+### What is DIP?
+The Dependency Inversion Principle says high-level modules should not depend on low-level modules. Both should depend on abstractions.
+
+### Why is DIP important?
+If your business logic directly creates and controls low-level classes, your system becomes hard to test, hard to change, and tightly coupled.
+
+### How to recognize a DIP violation?
+If a class uses `new` to create all of its dependencies internally, especially infrastructure classes like email senders, database clients, or payment gateways, DIP may be violated.
+
+### Typical DIP solution
+1. Define an abstraction for the dependency.
+2. Let high-level code depend on that abstraction.
+3. Inject the concrete implementation from outside.
+
+### Key Benefits of DIP
+1.  **Loose coupling**: Components can change independently.
+2.  **Testability**: You can replace real dependencies with mocks or stubs.
+3.  **Flexibility**: You can swap implementations without changing business logic.
