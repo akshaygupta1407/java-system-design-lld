@@ -87,3 +87,24 @@ Use Decorator when:
 1.  **Flexible feature addition**: Wrap objects with extra behavior as needed.
 2.  **Avoids subclass explosion**: No need for one class per combination.
 3.  **Composable behavior**: Multiple decorators can be stacked together.
+
+---
+
+## 3.5 Builder Pattern
+
+### What is Builder?
+The Builder Pattern separates the construction of a complex object from its final representation.
+
+### Why is Builder important?
+When a class has many optional fields, constructor overloads become messy and hard to read. Builder makes object creation clearer.
+
+### When should you use it?
+Use Builder when:
+1. A class has many optional parameters.
+2. You want readable object creation.
+3. You want to build immutable objects step by step.
+
+### Key Benefits
+1.  **Readable code**: Construction code is easy to understand.
+2.  **Flexible object creation**: Set only the fields you need.
+3.  **Good for immutability**: The final object can be made immutable.
