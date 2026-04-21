@@ -108,3 +108,24 @@ Use Builder when:
 1.  **Readable code**: Construction code is easy to understand.
 2.  **Flexible object creation**: Set only the fields you need.
 3.  **Good for immutability**: The final object can be made immutable.
+
+---
+
+## 3.6 Singleton Pattern
+
+### What is Singleton?
+The Singleton Pattern ensures that a class has only one instance and provides a global access point to it.
+
+### Why is Singleton important?
+Sometimes a system needs one shared object, like a configuration manager or logger. Singleton gives controlled shared access.
+
+### When should you use it?
+Use Singleton when:
+1. Only one instance should exist.
+2. You need shared state or shared access.
+3. Creating multiple instances would be wasteful or harmful.
+
+### Key Benefits
+1.  **Single shared instance**: One object coordinates the behavior.
+2.  **Controlled access**: The instance is created and accessed in one place.
+3.  **Useful for shared services**: Configuration, logging, caches, etc.
