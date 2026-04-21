@@ -171,3 +171,24 @@ Use Facade when:
 1.  **Simplification**: One simple method or class can coordinate many steps.
 2.  **Loose coupling**: Clients do not depend on subsystem details.
 3.  **Better readability**: Common workflows become easy to call and understand.
+
+---
+
+## 3.9 Command Pattern
+
+### What is Command?
+The Command Pattern turns a request into an object.
+
+### Why is Command important?
+When actions need to be queued, logged, undone, or passed around, Command gives a clean object-based way to represent them.
+
+### When should you use it?
+Use Command when:
+1. You want to decouple the sender from the action performer.
+2. You need undo/redo behavior.
+3. You want to queue or log actions.
+
+### Key Benefits
+1.  **Decoupling**: The invoker does not know the receiver details.
+2.  **Extensibility**: New commands are easy to add.
+3.  **Undo-friendly**: Commands can store state for rollback behavior.
