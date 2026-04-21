@@ -129,3 +129,24 @@ Use Singleton when:
 1.  **Single shared instance**: One object coordinates the behavior.
 2.  **Controlled access**: The instance is created and accessed in one place.
 3.  **Useful for shared services**: Configuration, logging, caches, etc.
+
+---
+
+## 3.7 Adapter Pattern
+
+### What is Adapter?
+The Adapter Pattern lets two incompatible interfaces work together by adding a wrapper between them.
+
+### Why is Adapter important?
+In real systems, you often need to use an old class or third-party library that does not match your expected interface.
+
+### When should you use it?
+Use Adapter when:
+1. You have an existing class with the wrong interface.
+2. You want to reuse a legacy or external component.
+3. You want compatibility without changing the original class.
+
+### Key Benefits
+1.  **Compatibility**: Makes mismatched interfaces work together.
+2.  **Reuse**: Helps you reuse existing code without rewriting it.
+3.  **Decoupling**: The client only knows the expected interface.
