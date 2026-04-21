@@ -150,3 +150,24 @@ Use Adapter when:
 1.  **Compatibility**: Makes mismatched interfaces work together.
 2.  **Reuse**: Helps you reuse existing code without rewriting it.
 3.  **Decoupling**: The client only knows the expected interface.
+
+---
+
+## 3.8 Facade Pattern
+
+### What is Facade?
+The Facade Pattern provides a simple interface to a complex subsystem.
+
+### Why is Facade important?
+When a system has many moving parts, Facade hides the complexity and gives the client one clean entry point.
+
+### When should you use it?
+Use Facade when:
+1. You want to simplify usage of a complex set of classes.
+2. You want one API for multiple subsystem actions.
+3. You want to reduce coupling between the client and subsystem internals.
+
+### Key Benefits
+1.  **Simplification**: One simple method or class can coordinate many steps.
+2.  **Loose coupling**: Clients do not depend on subsystem details.
+3.  **Better readability**: Common workflows become easy to call and understand.
